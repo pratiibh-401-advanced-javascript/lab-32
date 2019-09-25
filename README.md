@@ -4,7 +4,7 @@
 ## Authors: Pratiibh Bassi
 
 ## Links and Resources
-* [submission PR](https://github.com/pratiibh-401-advanced-javascript/lab-32/pull/2)
+* [submission Pull Request](https://github.com/pratiibh-401-advanced-javascript/lab-32/pull/1)
 * [Netlify Deployment](https://naughty-heisenberg-f81ef4.netlify.com/)
 
 ## Modules
