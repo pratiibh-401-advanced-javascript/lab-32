@@ -1,45 +1,49 @@
-# LAB - 17
-
-# TCP Server
-
-### Authors: Pratiibh Bassi
-
-### Links and Resources
-* [submission PR](https://github.com/pratiibh-401-advanced-javascript/lab-17/pull/1)
-* [travis](https://www.travis-ci.com/pratiibh-401-advanced-javascript/lab-17/builds/122703733)
-
-### Modules
-#### `app.js`
-#### `server.js`
-#### `logger.js`
-#### `app-test.js`
-#### `test.txt`
-
-#### Exported Values and Methods
-
-##### `fs.read(file) -> string`
-.toUppercase()
-
-##### `fs.write(file) -> string`
-Usage Notes or examples
-
-### Setup
-#### `.env` requirements
-* `PORT` - 3001
-
-#### Running the app 
-##### (must be done in this order)
-* `node server.js`
-* `node logger.js`
-* `node app.js ./files/test.txt`
+# LAB - 31/32 Hooks API + Custom Hooks: Sockets and Fetch
 
 
-  
+## Authors: Pratiibh Bassi
+
+## Links and Resources
+* [submission PR](https://github.com/pratiibh-401-advanced-javascript/lab-32/pull/2)
+* [Netlify Deployment](https://naughty-heisenberg-f81ef4.netlify.com/)
+
+## Modules
+### `index.js` - main entry point
+### `app.js` - imports in the following files
+* #### `shopping.js` uses hooks from form.js to fetch 
+* #### `todo.js`
+* #### `todo-list.js` - imports the following file to create unordered list for our data
+    * ##### `q.js` - Q server maintains pub/sub pattern and q.js connects to it
+### `form.js` - the hooks (handleChange + handleSubmit)
+
+## Exported Values and Methods
+
+### form.js
+
+* ### `handleChange(event) -> string` - takes valid input (task, category, date) and updates it to reflect what the user wants
+
+* ### `handleSubmit(event) -> handles the values/field changed from handleChange` 
+
+### shopping.js, todo.js
+
+* ### `saveFormDataToServer(data) -> fetches the POST from API ` 
+
+## Setup
+### `.env` requirements
+* `REACT_APP_Q_SERVER` - sockets
+* `REACT_APP_API` - API
+
+## Running the app 
+* `npm start`
+
+## Endpoints:
+* ### https://q-js401.herokuapp.com
+* ### https://api-js401.herokuapp.com/api/v1/todo
+
+
+
 #### Tests
-* How do you run tests?
-* What assertions were made?
-* What assertions need to be / should be made?
+* Tests not required
 
 #### UML
-![1st](./assets/lab17UML.jpg)
-![2nd](./assets/generallab17UML.jpg)
+![UML](./assets/lab32UML.jpg)
